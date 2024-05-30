@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  movies:
+    image: arunkotu/movies:latest
+    ports:
+      - 81:80
+    deploy:
+      replicas: 3
+  train:
+    image: arunkotu/train:latest
+    ports:
+      - 82:80
+    deploy:
+      replicas: 3
+  recharge:
+    image: arunkotu/recharge:latest
+    ports:
+      - 83:80
+    deploy:
+      replicas: 3
+  dth:
+    image: arunkotu/dth:latest
+    ports:
+      - 84:80
+    deploy:
+      replicas: 3
+
